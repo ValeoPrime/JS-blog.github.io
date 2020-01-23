@@ -1,6 +1,7 @@
-import {Header} from './components/header'
+import {Header} from './components/header.component'
+import {Navigation} from './components/navigation.component'
 
-const first = new Header('header')
+new Header('header')
+const Nav = new Navigation('navigation')
 
-console.log(first)
 
