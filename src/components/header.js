@@ -6,11 +6,15 @@ export class Header extends mainComponent {
     }
 
     init(){
+        if(localStorage.getItem('Visit')){
+            this.hide()
+        }
         const button = document.querySelector('.promo-button-js')
         button.addEventListener('click', hidePromo.bind(this))
     }
 }
 
 function hidePromo() {
+    localStorage.setItem('Visit', true)
     this.hide()
 }
