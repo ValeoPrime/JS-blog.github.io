@@ -7,7 +7,7 @@ export class mainComponent {
     init(){}
 
     show(){
-        this.$elem.classList.remowe('hide')
+        this.$elem.classList.remove('hide')
     }
 
     hide(){
