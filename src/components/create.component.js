@@ -1,6 +1,7 @@
 import {mainComponent} from '../core/mainComponent'
 import {Form} from '../core/form'
 import {Validators} from '../core/validators'
+import {ApiService, apiService} from '../services/api.service'
 
 export class Create extends mainComponent {
     constructor (id) {
@@ -24,16 +25,22 @@ export class Create extends mainComponent {
  
  
 
-function mySendForm(event) {
+async function mySendForm(event) {
     event.preventDefault()
     if(this.Form.isValid()){
         const formData = {
             type: this.$elem.type.value, 
             fulltext: this.$elem.fulltext.value,
-            title: this.$elem.title.value
+            title: this.$elem.title.value,
+            data: new Date().toLocaleDateString()
         }
-        console.log(formData);
+
+        await apiService.createPost(formData)
+
+        
         this.Form.clear()
+
+        alert('Запись сохранена в БД')
     } 
     
 
