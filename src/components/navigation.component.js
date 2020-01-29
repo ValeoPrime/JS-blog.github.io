@@ -1,5 +1,6 @@
 import {mainComponent} from '../core/mainComponent'
 
+
 export class Navigation extends mainComponent {
     constructor(id) {
         super(id)
@@ -27,6 +28,9 @@ function tabsChange(event) {
         event.target.classList.add('active')
 
         const activeTab = this.tabs.find(tab => tab.name === event.target.dataset.name)
+      
+        
+        
         this.tabs.forEach(tab => tab.component.hide())
         activeTab.component.show()
        

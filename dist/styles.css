@@ -2,6 +2,11 @@
   display: none !important;
 }
 
+#header {
+background: url('images/mountain-\ area\ bg1920x1200.jpg') center center/cover no-repeat;
+}
+
+
 .w-container {
   margin: 0 auto;
   width: 600px;
@@ -58,4 +63,13 @@ textarea {
 
 .multi-line {
   white-space: pre-line;
+}
+
+.tag-yellow {
+  background-color: yellow!important; 
+  color: black!important;
+}
+
+.center {
+  text-align: center;
 }

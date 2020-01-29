@@ -29,6 +29,18 @@ class ApiService {
             console.error(error);
         }
     }
+
+    async fetchPostsById(id){
+        try {
+            const request = new Request(`${this.url}/posts/${id}.json`, {
+                method: 'get'
+            })
+            const response = await fetch(request)
+            return await response.json()
+        } catch (error){
+            console.error(error);
+        }
+    }
 }
  
 export const apiService = new ApiService('https://js-blog-4cf5d.firebaseio.com/') 
