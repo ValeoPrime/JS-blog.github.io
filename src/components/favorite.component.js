@@ -56,7 +56,7 @@ function renderPost (post){
     const tag = post.type === 'news' 
     ?   '<li class="tag tag-blue tag-rounded">Новость</li>'
     :   '<li class="tag tag-yellow tag-rounded">Статья</li>'
-    console.log(post)
+
     let button = `<button class="button-round button-small button-danger" data-id="${post.id}">Удалить</button>`
 
 

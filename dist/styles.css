@@ -73,3 +73,8 @@ textarea {
 .center {
   text-align: center;
 }
+
+.buttonChange {
+  background-color: blue ;
+  color: aliceblue;
+}

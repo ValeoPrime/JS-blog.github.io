@@ -23,7 +23,7 @@
 <section class="container w-container hide js-section">
   <ul class="tabs" id="navigation">
     <li><a class="tab " href="#" data-name="posts">Посты</a></li>
-    <li><a class="tab active" href="#" data-name="create">Создать</a></li>
+    <li><a class="tab active" href="#" data-name="create" id = "create-post">Создать</a></li>
     <li><a class="tab" href="#" data-name="favor">Избранное</a></li>
   </ul>
 
@@ -36,17 +36,17 @@
 
     <div class="form-control">
       <label>Название</label>
-      <input type="text" name="title" placeholder="Введите название">
+      <input type="text" name="title" placeholder="Введите название" class="form-change">
     </div>
 
     <div class="form-control">
       <label>Текст</label>
-      <textarea name="fulltext" placeholder="Введите текст поста"></textarea>
+      <textarea name="fulltext" placeholder="Введите текст поста" class="form-change"></textarea>
     </div>
 
     <div class="form-control">
       <label>Тип</label>
-      <select name="type">
+      <select name="type" class="form-change">
         <option value="note" selected>Заметка</option>
         <option value="news">Новость</option>
       </select>
